@@ -1,16 +1,16 @@
 // import Translation from "../Components/i18next/Translation";
-import { useTranslation } from "@/app/i18n";
-import HeadPage from "../Components/headPage/headPage";
+import { useTranslation as UseTranslation } from "@/app/i18n";
+import HeadPage from "../components/headPage/headPage";
 import Image from "next/image";
 import myImage from "/public/img/myImage.png";
 import Head from "next/head";
 export async function generateMetadata({ params: { lng } }) {
-  const { t } = await useTranslation(lng);
+  const { t } = await UseTranslation(lng);
   return { title: t("about") };
 }
 export default async function About({ params: { lng } }) {
   // http://localhost:5000/products
-  const { t } = await useTranslation(lng);
+  const { t } = await UseTranslation(lng);
   return (
     <div
       id="about"

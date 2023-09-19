@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import HeadPage from "../Components/headPage/headPage";
+import HeadPage from "../components/headPage/headPage";
 import { useTranslation } from "@/app/i18n/client";
 // import WOW from "wowjs";
 

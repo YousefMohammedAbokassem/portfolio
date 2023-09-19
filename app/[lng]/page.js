@@ -3,17 +3,18 @@
 import TypeWriter from "./components/typeWriter/typeWriter";
 // import styles from './page.moAdule.css'
 import { Footer } from "./components/Footer";
-import { useTranslation } from "../i18n";
+// import { useTranslation } from "../i18n/index";
 import Image from "next/image";
 import { fallbackLng, languages } from "../i18n/settings";
 import me0 from "/public/img/me0.png";
+import { useTranslation as UseTranslation } from "../i18n";
 export async function generateMetadata({ params: { lng } }) {
-  const { t } = await useTranslation(lng);
+  const { t } = await UseTranslation(lng);
   return { title: t("home") };
 }
 export default async function Home({ params: { lng } }) {
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
-  const { t } = await useTranslation(lng);
+  const { t } = await UseTranslation(lng);
   return (
     <main className="mainBg home textColor container-fluid">
       <div className="infoAndImg d-flex align-items-center justify-content-center justify-content-md-between px-2 gap-md-4 ">
