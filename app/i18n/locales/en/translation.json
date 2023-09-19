@@ -10,9 +10,9 @@
   },
   "en": "English",
   "ar": "Arabic",
-  "reset":"Reset",
-  "colors":"Colors",
-  "subColors":"Sub Colors",
+  "reset": "Reset",
+  "colors": "Colors",
+  "subColors": "Sub Colors",
   "home": "Home",
   "about": "About",
   "about ": "About ",
@@ -36,5 +36,12 @@
   "jobSkills": "Job",
   "theJob": "Skills",
   "English": "English",
-  "Arabic": "Arabic"
+  "Arabic": "Arabic",
+  "contact": "Contact",
+  "us": "Us",
+  "fullName": "Full Name",
+  "emailAddress": "Email Address",
+  "emailSubject": "Email Subject",
+  "yourmessage": "Your Message",
+  "number": "Number"
 }

@@ -1,38 +1,10 @@
 @import "./var";
-#about {
+#contact {
   position: relative;
   top: 60px;
   height: calc(100vh - 60px);
   background-color: var(--secondBg-color);
   color: var(--text-color);
-  .image {
-    position: relative;
-    img {
-      @include circle(200px);
-      filter: drop-shadow(0px 0px 20px var(--product-color));
-      box-shadow: 0 0 5px var(--product-color), 0 0 15px var(--product-color);
-      @include mediaMax(250px) {
-        @include circle(150px);
-      }
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      @include circle(100%);
-      z-index: 1;
-      opacity: 0.2;
-      background-color: var(--product-color);
-    }
-  }
-  p {
-    margin-left: 10px;
-    margin-right: 10px;
-    @include mediaMin(600px) {
-      width: 80%;
-    }
-  }
   a {
     // background-color: var(--product-color);
     box-shadow: 0 0 22px var(--product-color);
@@ -61,6 +33,35 @@
 
     &:hover {
       // transform: scale(1.1);
+    }
+  }
+  form,
+  input,
+  textarea {
+    background-color: transparent;
+  }
+  form {
+    width: 75%;
+    @include mediaMax(550px) {
+      width: 95%;
+    }
+    input,
+    textarea {
+      width: 100%;
+      border: 2px solid var(--product-color);
+      border-radius: 6px;
+      padding: 15px 10px;
+      margin-top: 10px;
+      outline: none;
+      color: #fff;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    input {
+    }
+    textarea {
+      height: 200px;
     }
   }
 }

@@ -4,6 +4,7 @@ import HeadPage from "../components/headPage/headPage";
 import Image from "next/image";
 import myImage from "/public/img/myImage.png";
 import Head from "next/head";
+import Anchore from "../components/anchore/Anchore";
 export async function generateMetadata({ params: { lng } }) {
   const { t } = await UseTranslation(lng);
   return { title: t("about") };
@@ -28,13 +29,7 @@ export default async function About({ params: { lng } }) {
       </div>
       <h2 className="py-3 mb-0">{t("myWork")}</h2>
       <p className="text-center">{t("thisIs")}</p>
-      <a
-        href="/cv.pdf"
-        className="text-decoration-none py-2 px-4 radius-5 textColor"
-        download={"cv"}
-      >
-        {t("cv")}
-      </a>
+      <Anchore lng={lng} />
     </div>
   );
 }

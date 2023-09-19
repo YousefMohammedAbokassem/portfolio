@@ -8,6 +8,7 @@ import Image from "next/image";
 import { fallbackLng, languages } from "../i18n/settings";
 import me0 from "/public/img/me0.png";
 import { useTranslation as UseTranslation } from "../i18n";
+import Anchore from "./components/anchore/Anchore";
 export async function generateMetadata({ params: { lng } }) {
   const { t } = await UseTranslation(lng);
   return { title: t("home") };
@@ -34,13 +35,7 @@ export default async function Home({ params: { lng } }) {
             {/* <Translation word="thisIs" /> */}
             {t("thisIs")}
           </p>
-          <a
-            className="text-decoration-none  py-2 px-4 radius-5 textColor"
-            href="./cv"
-            download={"CV"}
-          >
-            {t("cv")}
-          </a>
+          <Anchore lng={lng} />
         </div>
         {/*  */}
         <div className="image d-none d-md-block">

@@ -23,12 +23,33 @@
       p {
       }
       a {
-        background-color: var(--product-color);
+        // background-color: var(--product-color);
         box-shadow: 0 0 22px var(--product-color);
         transition: 0.5s;
         display: inline-block;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 0%;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          top: var(--y);
+          left: var(--x);
+          transition: width 1s, height 1s;
+          background-color: var(--product-color);
+          z-index: -1;
+        }
+        &:hover::before {
+          height: 300px;
+          width: 300px;
+          // transform: scale(1.1);
+        }
+
         &:hover {
-          transform: scale(1.1);
         }
       }
       span:last-child {
