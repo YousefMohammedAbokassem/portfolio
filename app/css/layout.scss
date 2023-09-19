@@ -1,0 +1,54 @@
+@import "./var";
+@import "./home";
+@import "./nav";
+@import "./about";
+@import "./skills";
+@import "./gallery";
+:root {
+  /* nav and box */
+  --bg-color: #081b29;
+  --secondBg-color: #112e42;
+  --text-color: #ededed;
+  --product-color: #00abf0;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background-color: var(--product-color);
+  color: #fff;
+}
+::-webkit-scrollbar {
+  background-color: var(--secondBg-color);
+  // width:20px
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--product-color);
+  border-radius: 10px;
+}
+// start Home
+// end Home
+
+// custom classes
+@for $i from 0 through 50 {
+  .radius-#{$i} {
+    border-radius: #{$i}px;
+  }
+}
+.pointer {
+  cursor: pointer;
+}
+.textColor {
+  color: var(--text-color); // #fff
+}
+.textColorProduct {
+  color: var(--product-color) !important;
+}
+.mainBg {
+  background-color: var(--bg-color);
+}
+.secondBg {
+  background-color: var(--secondBg-color);
+}

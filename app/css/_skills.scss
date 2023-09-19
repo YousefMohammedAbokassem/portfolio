@@ -1,0 +1,34 @@
+@import "./var";
+#Skills {
+  position: relative;
+  top: 60px;
+  min-height: calc(100vh - 60px);
+  background-color: var(--secondBg-color);
+  color: var(--text-color);
+
+  .progresses {
+    .prog {
+      background: conic-gradient(var(--product-color) 0deg, transparent 0deg);
+      position: relative;
+      @include circle(150px);
+      box-shadow: 0 0 2px var(--product-color);
+      margin: auto;
+      z-index: 1;
+      display: flex;
+      // font-size: 10px;
+      font-size: 0.75rem;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 90%;
+        height: 90%;
+        background-color: var(--secondBg-color);
+        z-index: -1;
+      }
+    }
+  }
+}

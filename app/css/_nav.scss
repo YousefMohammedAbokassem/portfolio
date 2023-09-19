@@ -1,0 +1,123 @@
+@import "./var";
+nav {
+  $height: 60px;
+  height: $height;
+  max-height: $height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  .logoLan {
+    .logo {
+    }
+    .lan {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      .lanIcon {
+        width: 30px;
+        height: 30px;
+      }
+      .languages {
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--product-color);
+        top: 26px;
+        width: auto;
+        z-index: 10000;
+        height: 0;
+        overflow: hidden;
+        // display: none;
+        pointer-events: none;
+        transition: 0.5s;
+        &.active {
+          height: 81px;
+          pointer-events: all;
+          // display: block;
+        }
+        li {
+          opacity: 0.8;
+          transition: 0.5s;
+          &.active,
+          &:hover {
+            opacity: 1;
+            transform: scale(1.1);
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--text-color);
+          }
+        }
+        // span{
+        //   border: 15px solid;
+        //   border-color: red green blue orange ;
+        // }
+      }
+    }
+  }
+  .ulBar {
+    ul {
+      transition: 0.5s;
+      z-index: 1000;
+      @include mediaMax(767px) {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        top: 60px;
+        background: red;
+        background-color: var(--secondBg-color);
+        align-items: start !important;
+        overflow-y: hidden;
+        height: 0;
+        &.active {
+          @include mediaMax(767px) {
+            top: 60px;
+            height: 205px;
+          }
+        }
+        li {
+          width: 100%;
+          &:not(:last-child) {
+            border-bottom: 1px solid var(--text-color);
+          }
+        }
+      }
+      li {
+        a {
+          color: var(--text-color);
+          transition: 0.3s;
+          font-weight: bold;
+          opacity: 0.75;
+          @include mediaMin(768px) {
+            transform: scale(0.9);
+          }
+          &.active,
+          &:hover {
+            color: var(--product-color);
+            opacity: 1;
+            @include mediaMin(768px) {
+              transform: scale(1.1);
+            }
+          }
+          &:hover {
+            @include mediaMax(767px) {
+              padding-left: 15px !important ;
+            }
+          }
+          &.ar {
+            &:hover {
+              @include mediaMax(767px) {
+                padding-left: 0 !important ;
+                padding-right: 15px !important ;
+              }
+            }
+          }
+        }
+      }
+    }
+    .BarIcon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
