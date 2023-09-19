@@ -103,7 +103,7 @@ export default function Option( { lng } ) {
         {/* fa-spin */}
         <FontAwesomeIcon icon={faGear} className="iconOption" />
       </span>
-      <h6>colors</h6>
+      <h6>{t("colors")}</h6>
       <div className="themes">
         {/* #83e */}
         <span
@@ -121,7 +121,7 @@ export default function Option( { lng } ) {
         ></span>
       </div>
       <div className="colorProduct d-flex flex-column align-items-center justify-content-center">
-        <h6 className="position-absolute">SubColor</h6>
+        <h6 className="position-absolute">{t("subColors")}</h6>
         <div className="d-flex justify-content-center align-items-center gap-2 ">
           <span
             className="resetSpan"
@@ -137,7 +137,7 @@ export default function Option( { lng } ) {
         className="mt-3  border-0 text-white mainBg py-2 px-1 resetBtn"
         onClick={resetOptions}
       >
-        {t("yousef")}
+        {t("reset")}
       </button>
     </div>
   );

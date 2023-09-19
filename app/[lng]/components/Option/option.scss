@@ -12,8 +12,8 @@
   align-items: center;
   transition: 0.5s;
   @media (max-width: 500px) {
-    width: 150px;
-    right: -150px;
+    width: 175px;
+    right: -175px;
     &.ar {
     }
   }
@@ -21,7 +21,7 @@
     right: auto;
     left: -200px;
     @media (max-width: 500px) {
-      left: -150px;
+      left: -175px;
     }
   }
   &.showOption {
@@ -55,7 +55,7 @@
     }
   }
   .themes {
-    width: 68%;
+    width: 85%;
     height: 9%;
     background-color: var(--bg-color);
     margin-top: 46px;
@@ -84,7 +84,7 @@
     }
   }
   .colorProduct {
-    width: 68%;
+    width: 85%;
     height: 9%;
     background-color: var(--bg-color);
     margin-top: 46px;
