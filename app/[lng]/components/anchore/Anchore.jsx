@@ -2,7 +2,7 @@
 import { useTranslation } from "@/app/i18n/client";
 import React, { useEffect } from "react";
 import { moveButton } from "../Button";
-import WOW from "wowjs";
+// import WOW from "wowjs";
 import template101 from "/public/img/template101.png";
 import Image from "next/image";
 
@@ -10,8 +10,8 @@ export default function Anchore({ lng }) {
   const { t } = useTranslation(lng);
 
   useEffect(() => {
-    console.log(WOW);
-    new WOW.WOW().init();
+    // console.log(WOW);
+    // new WOW.WOW().init();
   }, []);
 
   // const moveButton = (e) => {
@@ -25,11 +25,10 @@ export default function Anchore({ lng }) {
 
   return (
     <a
-      className="text-decoration-none wow animate__fadeIn  py-2 px-4 radius-5 textColor cv"
+      className="text-decoration-none py-2 px-4 radius-5 textColor cv"
       href={`/cv.pdf`}
       download
       onMouseMove={moveButton}
-      data-wow-duration="2s"
     >
       {t("cv")}
     </a>
