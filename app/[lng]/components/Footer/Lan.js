@@ -5,7 +5,6 @@ import Link from "next/link";
 import { memo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
-import Lngs from "./Lngs";
 import { useTranslation } from "@/app/i18n/client";
 import { usePathname } from "next/navigation";
 
@@ -31,6 +30,7 @@ function Lan({ lng }) {
   // set to local storage
   const set = (e) => {
     localStorage.setItem("i18nextLng", e);
+    showLanguage();
   };
   return (
     <>
@@ -41,7 +41,6 @@ function Lan({ lng }) {
           onClick={showLanguage}
         />
         <ul className="languages position-absolute list-unstyled mb-0 ">
-         
           {languages.map((l, index) => {
             return (
               <li key={l} className={`text-center`}>

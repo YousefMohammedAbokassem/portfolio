@@ -33,11 +33,11 @@
       width: 80%;
     }
   }
-  a {
+  .cv {
     // background-color: var(--product-color);
     box-shadow: 0 0 22px var(--product-color);
     transition: 0.5s;
-    display: inline-block;
+    display: block;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -50,9 +50,9 @@
       transform: translate(-50%, -50%);
       top: var(--y);
       left: var(--x);
+      z-index: -1;
       transition: width 1s, height 1s;
       background-color: var(--product-color);
-      z-index: -1;
     }
     &:hover::before {
       height: 300px;

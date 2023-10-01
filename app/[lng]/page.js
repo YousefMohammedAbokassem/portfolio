@@ -13,15 +13,14 @@ export async function generateMetadata({ params: { lng } }) {
   const { t } = await UseTranslation(lng);
   return { title: t("home") };
 }
-export default async function Home({ params: { lng } }) {
+export default async function Home({ params: { lng, d } }) {
+  console.log(d,"d");
   if (languages.indexOf(lng) < 0) lng = fallbackLng;
   const { t } = await UseTranslation(lng);
   return (
     <main className="mainBg home textColor container-fluid">
       <div className="infoAndImg d-flex align-items-center justify-content-center justify-content-md-between px-2 gap-md-4 ">
         <div className="info">
-          <h1>{t("en")}</h1>
-          {/* <Footer lng={lng} /> */}
           <h3>
             <b className="textColorProduct">
               {t("iam")} {/* <Translation word="iam" />{" "} */}

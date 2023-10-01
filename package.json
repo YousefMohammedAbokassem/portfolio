@@ -28,6 +28,8 @@
     "react-i18next": "^13.2.2",
     "react-simple-typewriter": "^5.0.1",
     "sass": "^1.67.0",
-    "swiper": "^10.2.0"
+    "swiper": "^10.2.0",
+    "wow.js": "^1.2.2",
+    "wowjs": "^1.1.3"
   }
 }

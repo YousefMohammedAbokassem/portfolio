@@ -54,14 +54,17 @@
       margin-top: 10px;
       outline: none;
       color: #fff;
+      box-shadow: 0 0 5px var(--product-color);
       &::placeholder {
         color: #fff;
+        opacity: 0.8;
       }
     }
     input {
     }
     textarea {
       height: 200px;
+      resize: none;
     }
   }
 }

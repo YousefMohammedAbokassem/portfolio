@@ -1,24 +1,35 @@
 "use client";
 import { useTranslation } from "@/app/i18n/client";
-import React from "react";
+import React, { useEffect } from "react";
 import { moveButton } from "../Button";
+import WOW from "wowjs";
+import template101 from "/public/img/template101.png";
+import Image from "next/image";
+
 export default function Anchore({ lng }) {
   const { t } = useTranslation(lng);
-  //   const moveButton = (e) => {
-  //     const x = e.pageX - e.target.offsetLeft;
-  //     const y = e.pageY - e.target.offsetTop;
-  //     console.log(e.pageX,"pagex")
-  //     console.log(e.target.offsetLeft);
-  //     e.target.style.setProperty("--x", `${x}px`);
-  //     e.target.style.setProperty("--y", `${y}px`);
-  //   };
+
+  useEffect(() => {
+    console.log(WOW);
+    new WOW.WOW().init();
+  }, []);
+
+  // const moveButton = (e) => {
+  //   const x = e.pageX - e.target.offsetLeft;
+  //   const y = e.pageY - e.target.offsetTop - 60;
+  //   console.log(x, "x");
+  //   console.log(y, "y");
+  //   e.target.style.setProperty("--x", `${x}px`);
+  //   e.target.style.setProperty("--y", `${y}px`);
+  // };
 
   return (
     <a
-      className="text-decoration-none  py-2 px-4 radius-5 textColor cv"
-      href="./cv"
-      download={"CV"}
+      className="text-decoration-none wow animate__fadeIn  py-2 px-4 radius-5 textColor cv"
+      href={`/cv.pdf`}
+      download
       onMouseMove={moveButton}
+      data-wow-duration="2s"
     >
       {t("cv")}
     </a>

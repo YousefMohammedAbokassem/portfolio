@@ -9,6 +9,9 @@ import { languages } from "../i18n/settings";
 import { useTranslation } from "../i18n";
 import TypeWriter from "./components/typeWriter/typeWriter";
 import Image from "next/image";
+const isServer = typeof window === "undefined";
+const WOW = !isServer ? require("wowjs") : null;
+// import WOW from "wowjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,12 +20,18 @@ export const metadata = {
 
   // charset: "UTF-8",
 };
-
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
+
 export default async function RootLayout({ children, params: { lng } }) {
   const { t } = await useTranslation(lng);
+  // console.log(WOW);
+  // new WOW.WOW().init();
+
+  // componentDidMount() {
+  // new WOW().init()
+  // }
   return (
     <html lang={lng} dir={dir(lng)}>
       <head>
