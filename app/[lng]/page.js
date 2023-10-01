@@ -1,7 +1,6 @@
 // import { useTranslation } from "next-i18next";
 // import Translation from "./Components/i18next/Translation";
 import TypeWriter from "./components/typeWriter/typeWriter";
-// import styles from './page.moAdule.css'
 import { Footer } from "./components/Footer";
 // import { useTranslation } from "../i18n/index";
 import Image from "next/image";
